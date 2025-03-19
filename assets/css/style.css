@@ -1328,9 +1328,23 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
-
-  .avatar-box img { width: 120px; }
+  .avatar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;  /* Set the same size as the image width */
+    height: 160px; /* Set the height to make it a circle */
+    border-radius: 50%;  /* Make it a perfect circle */
+    overflow: hidden;  /* Ensure the image stays within the circular bounds */
+    border: 2px solid #fff;  /* Optional: Add a border around the image */
+  }
+  
+  /* Avatar Image styling */
+  .avatar-box img {
+    width: 160%;  /* Ensures the image takes the full size of the container */
+    height: 160%; /* Ensures the image takes the full size of the container */
+    object-fit: cover;  /* Ensures the image covers the entire container without stretching */
+  }
 
   .info-content .name { margin-bottom: 15px; }
 
