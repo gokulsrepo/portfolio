@@ -1215,13 +1215,36 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
 
 /**
- * responsive larger than 450px screen
+ * responsive larger than 350px screen
+ */
+@media (min-width: 350px) {
+
+  .avatar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;  /* Set the same size as the image width */
+    height: 80px; /* Set the height to make it a circle */
+    border-radius: 50%;  /* Make it a perfect circle */
+    overflow: hidden;  /* Ensure the image stays within the circular bounds */
+    border: 2px solid #fff;  /* Optional: Add a border around the image */
+  }
+  
+  /* Avatar Image styling */
+  .avatar-box img {
+    width: 160%;  /* Ensures the image takes the full size of the container */
+    height: 160%; /* Ensures the image takes the full size of the container */
+    object-fit: cover;  /* Ensures the image covers the entire container without stretching */
+  }
+}
+
+
+ /* responsive larger than 450px screen
  */
 
 @media (min-width: 450px) {
@@ -1241,8 +1264,25 @@ textarea.form-input::-webkit-resizer { display: none; }
   .project-img,
   .blog-banner-box { height: auto; }
 
-}
+  .avatar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;  /* Set the same size as the image width */
+    height: 110px; /* Set the height to make it a circle */
+    border-radius: 50%;  /* Make it a perfect circle */
+    overflow: hidden;  /* Ensure the image stays within the circular bounds */
+    border: 2px solid #fff;  /* Optional: Add a border around the image */
+  }
+  
+  /* Avatar Image styling */
+  .avatar-box img {
+    width: 160%;  /* Ensures the image takes the full size of the container */
+    height: 160%; /* Ensures the image takes the full size of the container */
+    object-fit: cover;  /* Ensures the image covers the entire container without stretching */
+  }
 
+}
 
 
 
